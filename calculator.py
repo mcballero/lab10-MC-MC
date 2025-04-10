@@ -1,8 +1,9 @@
-import math
-
 # https://github.com/mcballero/lab10-MC-MC.git
 # Partner 1: Maria Caballero
 # Partner 2: Matias Camaran
+
+import math
+
 
 """
 calculator.py
@@ -10,7 +11,7 @@ calculator.py
 
 One function per operation, in order.
 """
-# First example
+
 
 def square_root(a):
     try:

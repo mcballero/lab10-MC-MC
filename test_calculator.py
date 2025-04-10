@@ -1,9 +1,9 @@
-import unittest
-from calculator import *
-
 # https://github.com/mcballero/lab10-MC-MC.git
 # Partner 1: Maria Caballero
 # Partner 2: Matias Camaran
+
+import unittest
+from calculator import *
 
 class TestCalculator(unittest.TestCase):
 
@@ -37,21 +37,21 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(logarithm(9,8), 0.946394630357186)
 
     def test_log_invalid_argument(self): # 1 assertion
-        self.assertEqual()
+        self.assertEqual(logarithm(5, 0), "Error: Neither input can be 0")
 
     def test_log_invalid_base(self): # 1 assertion
         self.assertEqual(logarithm(0, 0), "Error: Neither input can be 0")
     
 
     def test_hypotenuse(self): # 3 assertions
-        self.assertAlmostEqual(hypotenuse(7.5, 2.5), 7.905)
+        self.assertAlmostEqual(hypotenuse(7.5, 2.5), 7.906, places=3)
         self.assertEqual(hypotenuse(3, 4), 5.0)
         self.assertEqual(hypotenuse('NUM', 12), "Error: must be real number, not str")
 
     def test_sqrt(self): # 3 assertions
         self.assertEqual(square_root(0), 0.0)
         self.assertEqual(square_root(4), 2)
-        self.assertAlmostEqual(square_root(2), 1.4142)
+        self.assertAlmostEqual(square_root(2), 1.4142136, places=6)
 
 # Do not touch this
 if __name__ == "__main__":
