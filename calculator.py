@@ -34,9 +34,15 @@ def hypotenuse(a, b):
 
 def add(a, b):
     try:
-        return (a+b)
+        if type(a) == int or type(b) == int:
+            return a + b
+        else:
+            raise TypeError("Cannot add string")
     except TypeError as e:
-        return (str(e))
+        print(f"Error: {e}")
+        return None
+
+
 
 def subtract(a, b):
     try:
@@ -44,6 +50,7 @@ def subtract(a, b):
         return result
     except TypeError as e:
         print(f"Error: {e}")
+        return None
 
 
 def logarithm(a, b):
@@ -55,8 +62,10 @@ def logarithm(a, b):
             return result
     except ValueError as e:
         print(f"Error: {e}")
+        return None
     except TypeError as e:
         print(f"Error: {e}")
+        return None
 
 
 def mul(a,b):
@@ -64,6 +73,8 @@ def mul(a,b):
         return (a * b)
     except TypeError as e:
         return (str(e))
+
+
 def div(a,b):
     try:
         return (b/a)
@@ -78,4 +89,8 @@ def exp(a,b):
         return (a ** b)
     except TypeError as e:
         return (str(e))
+
+
+
+
 
