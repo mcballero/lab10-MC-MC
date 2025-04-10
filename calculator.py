@@ -34,11 +34,9 @@ def hypotenuse(a, b):
 
 def add(a, b):
     try:
-        result = a + b
-        return result
+        return (a+b)
     except TypeError as e:
-        print(f"Error: {e}")
-        return None
+        return (str(e))
 
 def subtract(a, b):
     try:
@@ -71,6 +69,8 @@ def div(a,b):
         return (b/a)
     except ZeroDivisionError as e:
         return (str(e))
+    except TypeError as e:
+        return (str(e))
 
 
 def exp(a,b):
@@ -78,8 +78,4 @@ def exp(a,b):
         return (a ** b)
     except TypeError as e:
         return (str(e))
-
-
-
-
 
