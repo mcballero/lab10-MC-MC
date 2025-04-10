@@ -1,5 +1,5 @@
 import math
-<<<<<<< HEAD
+
 # https://github.com/mcballero/lab10-MC-MC.git
 # Partner 1: Maria Caballero
 # Partner 2: Matias Camaran
@@ -47,28 +47,6 @@ def subtract(a, b):
     except TypeError as e:
         print(f"Error: {e}")
 
-def multiply(a, b):
-    try:
-        result = a * b
-        return result
-    except TypeError as e:
-        print(f"Error: {e}")
-
-
-def divide(a, b): # raise ZeroDivisionError if a == 0
-    try:
-        if a == 0:
-            raise ZeroDivisionError("Can't Divide by zero!")
-        else:
-            result = a / b
-            return result
-        result = a * b
-        return result
-    except ZeroDivisionError as e:
-        print(f"Error: {e}")
-    except TypeError as e:
-        print(f"Error: {e}")
-
 
 def logarithm(a, b):
     try:
@@ -83,26 +61,6 @@ def logarithm(a, b):
         print(f"Error: {e}")
 
 
-def exponent(a, b):
-    try:
-        result = a ** b
-        return result
-    except TypeError as e:
-        print(f"Error: {e}")
-
-
-=======
-# First example
-def add(a, b):
-    try:
-        return (a+b)
-    except TypeError as e:
-        return (str(e))
-def sub(a,b):
-    try:
-        return (a - b)
-    except TypeError as e:
-        return (str(e))
 def mul(a,b):
     try:
         return (a * b)
@@ -114,18 +72,13 @@ def div(a,b):
     except ZeroDivisionError as e:
         return (str(e))
 
-def log(a,b):
-    try:
-        return math.log(a,b)
-    except ValueError as e:
-        return (str(e))
 
 def exp(a,b):
     try:
         return (a ** b)
     except TypeError as e:
         return (str(e))
->>>>>>> c3c1c0b1780948ea0f635437dca3cf5e2cc7c8b5
+
 
 
 
