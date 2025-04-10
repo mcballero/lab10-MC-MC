@@ -12,7 +12,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(2, 3), 5)
         self.assertEqual(add(0, 10), 10)
         with self.assertRaises(TypeError):
-            add("78", "88")  # Will now raise
+            add("78", 88)  # Will now raise
 
     def test_subtract(self):
         self.assertEqual(subtract(2, 3), -1)
