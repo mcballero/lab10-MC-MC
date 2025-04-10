@@ -18,8 +18,7 @@ def square_root(a):
             raise ValueError("Cannot get the square root of a negative number")
         return math.sqrt(a)
     except ValueError as e:
-        print(f"Error: {e}")
-        return None
+        return f"Error: {e}"
 
 
 def hypotenuse(a, b):
@@ -27,8 +26,7 @@ def hypotenuse(a, b):
         hypo = math.hypot(a, b)
         return hypo
     except TypeError as e:
-        print(f"Error: {e}")
-        return None
+        return f"Error: {e}"
 
 # calculator.py functions part 1
 
@@ -39,8 +37,7 @@ def add(a, b):
         else:
             raise TypeError("Cannot add string")
     except TypeError as e:
-        print(f"Error: {e}")
-        return None
+        return f"Error: {e}"
 
 
 
@@ -49,8 +46,7 @@ def subtract(a, b):
         result = a - b
         return result
     except TypeError as e:
-        print(f"Error: {e}")
-        return None
+        return f"Error: {e}"
 
 
 def logarithm(a, b):
@@ -61,11 +57,10 @@ def logarithm(a, b):
             result = math.log(b, a)
             return result
     except ValueError as e:
-        print(f"Error: {e}")
-        return None
+        return f"Error: {e}"
     except TypeError as e:
-        print(f"Error: {e}")
-        return None
+        return f"Error: {e}"
+
 
 
 def mul(a,b):

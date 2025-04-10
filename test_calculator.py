@@ -1,14 +1,17 @@
 import unittest
 from calculator import *
 
+# https://github.com/mcballero/lab10-MC-MC.git
+# Partner 1: Maria Caballero
+# Partner 2: Matias Camaran
+
 class TestCalculator(unittest.TestCase):
-    ######### Partner 2
+
+    # Partner 2
     def test_add(self):
         self.assertEqual(add(2,3),5)
         self.assertEqual(add(0,10),10)
         self.assertRaises(add("78","88"), "Error: Cannot add string")
-
-
 
 
     def test_subtract(self):
@@ -17,7 +20,7 @@ class TestCalculator(unittest.TestCase):
         self.assertRaises(subtract("78", "88"), "Error: unsupported operand type(s) for -: 'str' and 'str'")
 
 
-    ######## Partner 2
+    # Partner 2
     def test_divide_by_zero(self): # 1 assertion
         self.assertRaises(div(0,10), ZeroDivisionError)
         self.assertRaises(div("a", 10), TypeError)
@@ -32,14 +35,13 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(logarithm(6,8),1.1605584217036247)
         self.assertEqual(logarithm("6",8), "Error: must be real number, not str")
         self.assertEqual(logarithm(9,8), 0.946394630357186)
+
     def test_log_invalid_argument(self): # 1 assertion
+        self.assertEqual()
+
+    def test_log_invalid_base(self): # 1 assertion
         self.assertEqual(logarithm(0, 0), "Error: Neither input can be 0")
-
-
-     def test_log_invalid_base(self): # 1 assertion
-         self.assertEqual(logarithm(0, 8), "Error: Neither input can be 0")
     
-
 
     def test_hypotenuse(self): # 3 assertions
         self.assertAlmostEqual(hypotenuse(7.5, 2.5), 7.905)
