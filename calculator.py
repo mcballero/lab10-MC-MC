@@ -12,81 +12,35 @@ calculator.py
 One function per operation, in order.
 """
 
+import math
 
+# New functions above add
 def square_root(a):
-    try:
-        if a < 0:
-            raise ValueError("Cannot get the square root of a negative number")
-        return math.sqrt(a)
-    except ValueError as e:
-        return f"Error: {e}"
-
+    if a < 0:
+        raise ValueError("Cannot get the square root of a negative number")
+    return math.sqrt(a)
 
 def hypotenuse(a, b):
-    try:
-        hypo = math.hypot(a, b)
-        return hypo
-    except TypeError as e:
-        return f"Error: {e}"
+    return math.hypot(a, b)
 
-# calculator.py functions part 1
-
+# Basic operations
 def add(a, b):
-    try:
-        if type(a) == int or type(b) == int:
-            return a + b
-        else:
-            raise TypeError("Cannot add string")
-    except TypeError as e:
-        return f"Error: {e}"
-
-
+    return a + b
 
 def subtract(a, b):
-    try:
-        result = a - b
-        return result
-    except TypeError as e:
-        return f"Error: {e}"
+    return a - b
 
+def mul(a, b):
+    return a * b
+
+def div(a, b):
+    return b / a  # raises ZeroDivisionError if a == 0
 
 def logarithm(a, b):
-    try:
-        if b == 0 or a == 0:
-          raise ValueError('Neither input can be 0')
-        else:
-            result = math.log(b, a)
-            return result
-    except ValueError as e:
-        return f"Error: {e}"
-    except TypeError as e:
-        return f"Error: {e}"
+    return math.log(b, a)  # raises ValueError if invalid
 
-
-
-def mul(a,b):
-    try:
-        return (a * b)
-    except TypeError as e:
-        return (str(e))
-
-
-def div(a,b):
-    try:
-        return (b/a)
-    except ZeroDivisionError as e:
-        return (str(e))
-    except TypeError as e:
-        return (str(e))
-
-
-def exp(a,b):
-    try:
-        return (a ** b)
-    except TypeError as e:
-        return (str(e))
-
-
+def exp(a, b):
+    return a ** b
 
 
 
