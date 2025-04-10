@@ -1,4 +1,5 @@
 import math
+<<<<<<< HEAD
 # https://github.com/mcballero/lab10-MC-MC.git
 # Partner 1: Maria Caballero
 # Partner 2: Matias Camaran
@@ -39,14 +40,14 @@ def add(a, b):
         print(f"Error: {e}")
         return None
 
-def sub(a, b):
+def subtract(a, b):
     try:
         result = a - b
         return result
     except TypeError as e:
         print(f"Error: {e}")
 
-def mul(a, b):
+def multiply(a, b):
     try:
         result = a * b
         return result
@@ -54,7 +55,7 @@ def mul(a, b):
         print(f"Error: {e}")
 
 
-def div(a, b): # raise ZeroDivisionError if a == 0
+def divide(a, b): # raise ZeroDivisionError if a == 0
     try:
         if a == 0:
             raise ZeroDivisionError("Can't Divide by zero!")
@@ -69,7 +70,7 @@ def div(a, b): # raise ZeroDivisionError if a == 0
         print(f"Error: {e}")
 
 
-def log(a, b):
+def logarithm(a, b):
     try:
         if b == 0 or a == 0:
           raise ValueError('Neither input can be 0')
@@ -82,7 +83,7 @@ def log(a, b):
         print(f"Error: {e}")
 
 
-def exp(a, b):
+def exponent(a, b):
     try:
         result = a ** b
         return result
@@ -90,6 +91,41 @@ def exp(a, b):
         print(f"Error: {e}")
 
 
+=======
+# First example
+def add(a, b):
+    try:
+        return (a+b)
+    except TypeError as e:
+        return (str(e))
+def sub(a,b):
+    try:
+        return (a - b)
+    except TypeError as e:
+        return (str(e))
+def mul(a,b):
+    try:
+        return (a * b)
+    except TypeError as e:
+        return (str(e))
+def div(a,b):
+    try:
+        return (b/a)
+    except ZeroDivisionError as e:
+        return (str(e))
+
+def log(a,b):
+    try:
+        return math.log(a,b)
+    except ValueError as e:
+        return (str(e))
+
+def exp(a,b):
+    try:
+        return (a ** b)
+    except TypeError as e:
+        return (str(e))
+>>>>>>> c3c1c0b1780948ea0f635437dca3cf5e2cc7c8b5
 
 
 
