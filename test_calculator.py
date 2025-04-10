@@ -3,12 +3,18 @@ from calculator import *
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
-    # def test_add(self): # 3 assertions
-    #     fill in code
+    def test_add(self):
+        self.assertEqual(add(2,3),5)
+        self.assertEqual(add(0,10),10)
+        self.assertRaises(add("78","88"), "Error: Cannot add string")
 
-    # def test_subtract(self): # 3 assertions
-    #     fill in code
-    # ##########################
+
+
+
+    def test_subtract(self):
+        self.assertEqual(subtract(2, 3), -1)
+        self.assertEqual(subtract(6, 4), 2)
+        self.assertRaises(subtract("78", "88"), "Error: unsupported operand type(s) for -: 'str' and 'str'")
 
     ######## Partner 1
     # def test_multiply(self): # 3 assertions
@@ -19,19 +25,19 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 2
-    # def test_divide_by_zero(self): # 1 assertion
-    #     # call division function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     div(0, 5)
-    #     fill in code
+    def test_divide_by_zero(self): # 1 assertion
+        self.assertRaises(div(0,10), ZeroDivisionError)
+        self.assertRaises(div("a", 10), TypeError)
 
-    # def test_logarithm(self): # 3 assertions
-    #     fill in code
 
-    # def test_log_invalid_base(self): # 1 assertion
-    #     # use same technique from test_divide_by_zero
-    #     fill in code
-    # ##########################
+    def test_logarithm(self):
+        self.assertEqual(logarithm(6,8),1.1605584217036247)
+        self.assertEqual(logarithm("6",8), "Error: must be real number, not str")
+        self.assertEqual(logarithm(9,8), 0.946394630357186)
+
+
+     def test_log_invalid_base(self): # 1 assertion
+         self.assertEqual(logarithm(0, 8), "Error: Neither input can be 0")
     
     ######## Partner 1
     # def test_log_invalid_argument(self): # 1 assertion
