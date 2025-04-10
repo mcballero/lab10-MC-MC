@@ -12,9 +12,7 @@ calculator.py
 One function per operation, in order.
 """
 
-import math
 
-# New functions above add
 def square_root(a):
     if a < 0:
         raise ValueError("Cannot get the square root of a negative number")
@@ -23,24 +21,20 @@ def square_root(a):
 def hypotenuse(a, b):
     return math.hypot(a, b)
 
-# Basic operations
 def add(a, b):
     return a + b
 
 def subtract(a, b):
     return a - b
 
-def mul(a, b):
+def mul(a, b):  # must be called mul
     return a * b
 
-def div(a, b):
-    return b / a  # raises ZeroDivisionError if a == 0
+def div(a, b):  # must be called div
+    return b / a  # this exact order
 
 def logarithm(a, b):
-    return math.log(b, a)  # raises ValueError if invalid
+    return math.log(b, a)  # base a of b
 
-def exp(a, b):
+def exp(a, b):  # must be called exp
     return a ** b
-
-
-
