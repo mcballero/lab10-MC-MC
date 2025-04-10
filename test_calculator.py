@@ -11,19 +11,19 @@ class TestCalculator(unittest.TestCase):
     def test_add(self):
         self.assertEqual(add(2,3),5)
         self.assertEqual(add(0,10),10)
-        self.assertRaises(add("78","88"), "Error: Cannot add string")
+        self.assertEqual(add("78","88"), "Error: Cannot add string")
 
 
     def test_subtract(self):
         self.assertEqual(subtract(2, 3), -1)
         self.assertEqual(subtract(6, 4), 2)
-        self.assertRaises(subtract("78", "88"), "Error: unsupported operand type(s) for -: 'str' and 'str'")
+        self.assertEqual(subtract("78", "88"), "Error: unsupported operand type(s) for -: 'str' and 'str'")
 
 
     # Partner 2
     def test_divide_by_zero(self): # 1 assertion
-        self.assertRaises(div(0,10), ZeroDivisionError)
-        self.assertRaises(div("a", 10), TypeError)
+        self.assertEqual(div(0,10), 'division by zero')
+        self.assertEqual(div("a", 10), "unsupported operand type(s) for /: 'int' and 'str'")
 
     # Partner 1
     def test_multiply(self): # 3 assertions
